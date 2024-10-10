@@ -72,7 +72,7 @@ nav > * {
   align-content: center;
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
-  font-size: x-large;
+  font-size: large;
   color: white;
 }
 
@@ -126,14 +126,49 @@ section {
   margin-left: 0%;
 }
 
+/* proportional-units */
 img {
-  /* max-width: 100%; */
   height: auto;
-  max-width: 300px;
+  max-width: 25vh;
   width: -moz-available;
   width: -webkit-fill-available;
 }
 
+.image-fadeIn {
+  opacity: 0;
+  /* display: none; */
+
+  transition: 1s opacity ease-in;
+	-moz-transition: 1s opacity ease-in;
+	-webkit-transition: 1s opacity ease-in;
+
+  -webkit-animation: 5s show;
+    -moz-animation: 5s show;
+    -ms-animation: 5s show;
+    animation: 5s show;
+}
+/* .image-fadeIn:hover {
+  opacity: 1;
+} */
+
+@-webkit-keyframes show {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@-moz-keyframes show {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@-ms-keyframes show {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes show {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* box-sizing */
 .about-quote {
   box-sizing: border-box;
   margin: 1em;
@@ -152,7 +187,7 @@ img {
   background-color: rgb(248, 248, 248, 0);
   border-style: solid;
   border-width: 1px 0 0 0;
-  /* border-width: 2px; */
+  
 
 }
 
